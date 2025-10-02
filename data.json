@@ -1,0 +1,114 @@
+{
+    "value": [
+        {
+            "repository": {
+                "id": "repo-1234",
+                "name": "Mock Project",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-1234",
+                "project": {
+                    "id": "proj-1234",
+                    "name": "Mock Project",
+                    "state": "unchanged",
+                    "visibility": "private",
+                    "lastUpdateTime": "0001-01-01T00:00:00"
+                }
+            },
+            "pullRequestId": 101,
+            "codeReviewId": 101,
+            "status": "active",
+            "createdBy": {
+                "displayName": "User One",
+                "id": "user-1",
+                "uniqueName": "user.one@example.com",
+                "imageUrl": "https://dev.azure.com/ORG_NAME/_apis/profile/avatars/user1"
+            },
+            "creationDate": "2025-09-29T12:00:00Z",
+            "closedDate": null,
+            "title": "Add login feature",
+            "description": "Implements a basic login flow with username/password validation.",
+            "sourceRefName": "refs/heads/feature/login",
+            "targetRefName": "refs/heads/develop",
+            "mergeStatus": "notSet",
+            "isDraft": false,
+            "lastMergeSourceCommit": {
+                "commitId": "abc123def456",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-1234/commits/abc123def456"
+            },
+            "lastMergeTargetCommit": {
+                "commitId": "def456ghi789",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-1234/commits/def456ghi789"
+            },
+            "lastMergeCommit": null,
+            "reviewers": [
+                {
+                    "id": "user-2",
+                    "displayName": "User Two",
+                    "uniqueName": "user.two@example.com",
+                    "vote": 0
+                },
+                {
+                    "id": "user-3",
+                    "displayName": "User Three",
+                    "uniqueName": "user.three@example.com",
+                    "vote": 10
+                }
+            ],
+            "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-1234/pullRequests/101",
+            "supportsIterations": true
+        },
+        {
+            "repository": {
+                "id": "repo-5678",
+                "name": "Mock Frontend",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-5678",
+                "project": {
+                    "id": "proj-5678",
+                    "name": "Mock Project",
+                    "state": "unchanged",
+                    "visibility": "private",
+                    "lastUpdateTime": "0001-01-01T00:00:00"
+                }
+            },
+            "pullRequestId": 102,
+            "codeReviewId": 102,
+            "status": "completed",
+            "createdBy": {
+                "displayName": "User Four",
+                "id": "user-4",
+                "uniqueName": "user.four@example.com",
+                "imageUrl": "https://dev.azure.com/ORG_NAME/_apis/profile/avatars/user4"
+            },
+            "creationDate": "2025-09-26T14:00:00Z",
+            "closedDate": "2025-09-27T09:00:00Z",
+            "title": "Fix navbar responsiveness",
+            "description": "Resolved alignment issues on mobile view.",
+            "sourceRefName": "refs/heads/bugfix/navbar",
+            "targetRefName": "refs/heads/develop",
+            "mergeStatus": "succeeded",
+            "isDraft": false,
+            "lastMergeSourceCommit": {
+                "commitId": "ghi789jkl012",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-5678/commits/ghi789jkl012"
+            },
+            "lastMergeTargetCommit": {
+                "commitId": "mno345pqr678",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-5678/commits/mno345pqr678"
+            },
+            "lastMergeCommit": {
+                "commitId": "xyz999qwe888",
+                "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-5678/commits/xyz999qwe888"
+            },
+            "reviewers": [
+                {
+                    "id": "user-5",
+                    "displayName": "User Five",
+                    "uniqueName": "user.five@example.com",
+                    "vote": 10
+                }
+            ],
+            "url": "https://dev.azure.com/ORG_NAME/_apis/git/repositories/repo-5678/pullRequests/102",
+            "supportsIterations": true
+        }
+    ],
+    "count": 5
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ site.name }}</title>
+  <link rel="stylesheet" href="https://usetrmnl.com/assets/plugins-3f3ebe03dde623eccb88bb92df59532558f44737db4a00910cccf716f7c76610.css">
+  <script src="https://usetrmnl.com/js/latest/plugins.js"></script>
+</head>
+<body class="environment trmnl">
+<div class="screen">
+ <div class="screen">
+  <div class="view view--half_horizontal">
+      <div class="layout">
+      <table class="table" data-table-limit="true">
+        <thead>
+          <tr>
+            <th><span class="title">Pull Request</span></th>
+            <th><span class="title">Status</span></th>
+            <th><span class="title">Reviews</span></th>
+            <th><span class="title">Created by</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% assign prs = value | slice: 0, 3 %}
+          {% for pr in prs %}
+          <tr>
+            <td><span class="label label--small">{{pr.title}}</span></td>
+            <td><span class="label label--small text--center">{% if pr.status == "completed"%}Completed{% else %}Open{% endif %}</span></td>
+            <td>
+              <div class="progress-dots progress-dots--small">
+                <div class="track">
+                  {% assign ordered_reviewers = pr.reviewers | sort: "vote" | reverse %}
+                  {% for reviewer in ordered_reviewers %}
+                    <div class="dot {% if reviewer.vote == 10 %} dot--filled {% endif %} {% if reviewer.isFlagged %} dot--current {% endif %}"></div>
+                  {% endfor %}
+                </div>
+              </div>
+            </td>
+            <td><span class="label label--small">{{pr.createdBy.displayName}}</span></td>
+
+          </tr>
+          {% else %}
+<tr>
+            <td><span class="label">No Pull Requests found!</span></td>   
+</tr>{% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+   
+   <div class="title_bar">
+  <img class="image" src="/images/plugins/trmnl--render.svg">
+  <span class="title">Pull Requests for {{ trmnl.plugin_settings.custom_fields_values.project_id }}</span>
+</div>
+
+</div>
+</div>
+</body>  
+</html>

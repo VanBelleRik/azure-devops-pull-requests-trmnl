@@ -1,27 +1,15 @@
 {
-  "name": "azure-devops-pull-requests",
+  "name": "azure-devops-pr",
   "version": "1.0.0",
-  "description": "TRMNL Plugin - Azure DevOps (Pull Requests)",
+  "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VanBelleRik/azure-devops-pull-requests.git"
-  },
-  "keywords": [
-    "trmnl"
-  ],
-  "author": "Rik Van Belle",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VanBelleRik/azure-devops-pull-requests/issues"
-  },
-  "homepage": "https://github.com/VanBelleRik/azure-devops-pull-requests#readme",
   "dependencies": {
-    "express": "^5.1.0",
-    "node-fetch": "^3.3.2"
+    "liquidjs": "^10.21.1"
   }
 }
